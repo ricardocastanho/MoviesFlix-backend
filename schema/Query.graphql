@@ -1,6 +1,7 @@
 #import User from 'src/User.graphql'
 
 type Query {
-    users: [Users]
-    user(id: Int): Users
+    users: [User]
+    user(id: Int): User
+    login(data: inputLogin): User
 }
