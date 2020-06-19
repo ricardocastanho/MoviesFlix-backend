@@ -3,10 +3,14 @@ const bcrypt = require('bcrypt');
 const { auth } = require('./auth/auth')
 
 module.exports = {
-    async users() {
+    async users(obj, args, ctx) {
+        console.log(ctx)
+        if(!ctx.user){
+            throw new Error("noo")
+        }
         const users = await User.findAll()
-        console.log("asdasd")
         return users
+        
     },
     async login(_, { data }) {
         const user = await User.findOne({

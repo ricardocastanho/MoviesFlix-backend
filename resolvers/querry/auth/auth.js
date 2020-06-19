@@ -15,7 +15,7 @@ module.exports = {
         return {
             ...user_info,
             token: jwt.encode(user_info,
-                "disjnfdnjsfkjdnsfdi")
+                "123")
         }
     }
 }
