@@ -1,7 +1,6 @@
 const jwt = require('jwt-simple')
 
-module.exports = ({ req }) => {
-    // get the user token from the headers
+module.exports = async ({ req }) => {
     const auth = req.headers.authorization
     const token = auth
 

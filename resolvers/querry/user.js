@@ -4,9 +4,8 @@ const { auth } = require('./auth/auth')
 
 module.exports = {
     async users(obj, args, ctx) {
-        console.log(ctx)
         if(!ctx.user){
-            throw new Error("noo")
+            throw new Error("Você não está logado. Faça o login para acessar aos nossos serviços")
         }
         const users = await User.findAll()
         return users
