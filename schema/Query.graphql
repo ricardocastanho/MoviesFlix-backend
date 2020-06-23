@@ -1,7 +1,9 @@
 #import User from 'src/User.graphql'
+#import Movie from 'src/Movie.graphql'
 
 type Query {
     users: [User]
+    movies: [Movie]
     user(id: Int): User
     login(data: inputLogin): User
 }
