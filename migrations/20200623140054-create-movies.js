@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -24,11 +24,15 @@ module.exports = {
       updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
-      }
-    });
+      },
+      deleted_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+    })
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('movies');
-  }
-};
+    return queryInterface.dropTable('movies')
+  },
+}
